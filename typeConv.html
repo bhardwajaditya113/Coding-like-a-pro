@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>typeConv.html</title>
+  <meta charset = "UTF-8" />
+  <style type = "text/css">
+  </style>
+  <script type = "text/javascript">
+  //<![CDATA[
+  
+  function addWrong(){
+    //input two numbers
+    var x = prompt("X");
+    var y = prompt("Y");
+    var sum = x + y;
+    alert(x + " + " + y + " = " + sum); 
+  } // end addWrong
+
+  function addRight(){
+    //input two numbers
+    var x = prompt("X");
+    var y = prompt("Y");
+
+    //force values to integer format
+    x = parseInt(x);
+    y = parseInt(y);
+
+    var sum = x + y;
+    alert(x + " + " + y + " = " + sum); 
+
+  } // end addRight
+  
+  //]]>
+  </script>
+</head>
+
+<body>
+  <h1>Type Conversion</h1>
+  <p>
+    Note there is a deliberate error in this program. When the user
+    clicks on the "Add Wrong" button, the program will work incorrectly.
+    This illustrates an important point about user input. The "Add Right"
+    button links to another function which resolves this problem.
+  </p>
+
+  <form action = "">
+    <fieldset>
+      <button type = "button"
+              onclick = "addWrong()">
+        Add Wrong
+      </button>
+        
+      <button type = "button"
+              onclick = "addRight()">
+        Add Right
+      </button>
+    </fieldset>
+  </form>        
+
+</body>
+</html>

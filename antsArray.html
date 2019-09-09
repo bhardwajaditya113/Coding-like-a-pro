@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>antsArray.html</title>
+  <meta charset = "UTF-8" />
+  <style type = "text/css">
+  </style>
+  <script type = "text/javascript">
+  //<![CDATA[
+  //This old man using functions and arrays
+
+  var distractionList = Array("", "suck his thumb", "tie his shoe",
+      "climb a tree", "shut the door");
+
+  function makeSong(){
+    //create output variable
+    var output = document.getElementById("output");
+    
+    output.innerHTML = "";
+    for (verseNum = 1; verseNum < distractionList.length; verseNum++){
+      output.innerHTML += verse(verseNum);
+      output.innerHTML += chorus();
+    } // end for loop
+
+  } // end makeSong
+
+  function chorus(){
+    var result = "-and they all came marching down, <br />";
+    result += "to the ground, to get out, of the rain. <br />";
+    result += "boom boom boom boom <br />";
+    result += "boom boom boom boom <br />";
+    result += "<br />";
+    return result;
+  } // end chorus
+
+  function verse(verseNumber){
+    var distraction = distractionList[verseNumber];
+
+    var result = "The ants go marching ";
+    result += verseNumber + " by " + verseNumber + ", ";
+    result += "hurrah, hurrah <br />";
+    result += "The ants go marching ";
+    result += verseNumber + " by " + verseNumber + ", ";
+    result += "hurrah, hurrah <br />";
+    result += "The ants go marching ";
+    result += verseNumber + " by " + verseNumber + "<br />";
+    result += "The litle one stops to ";
+    result += distraction + "<br /> <br />";
+
+    return result;
+  } // end verse
+
+  //]]>
+  </script>
+</head>
+
+<body>
+  <h1>Using Functions, parameters, and return values</h1>
+  <form action = "">
+    <fieldset>
+      <button type = "button"
+              onclick = "makeSong()">
+        make song
+      </button>
+    </fieldset>
+  </form>
+
+  <div id = "output">
+    The song will appear here...
+  </div>
+
+</body>
+</html>

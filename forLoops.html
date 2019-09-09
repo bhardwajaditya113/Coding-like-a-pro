@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>forLoops.html</title>
+  <meta charset = "UTF-8" />
+  <style type = "text/css">
+  </style>
+  <script type = "text/javascript">
+  //<![CDATA[
+    var output;
+
+    function init(){
+      output = document.getElementById("output");
+    } // end init
+
+    function count(){
+      output.innerHTML = "";
+      for (i = 1; i <= 10; i++){
+        output.innerHTML += i + "<br />";
+      } // end for loop
+    } // end count
+
+    function back(){
+      output.innerHTML = "";
+      for (i = 10; i > 0; i--){
+        output.innerHTML += i + "<br />";
+      } // end for loop
+    } // end back
+
+    function byFive(){
+      output.innerHTML = "";
+      for (i = 5; i <= 25; i += 5){
+        output.innerHTML += i + "<br />";
+      } // end for loop
+    } // end byFive
+
+  //]]>
+  </script>
+</head>
+
+<body onload = "init()">
+  <h1>For loops</h1>
+  <form action = "">
+    <fieldset>
+      <button type = "button"
+              onclick = "count()">
+        count to ten
+      </button>
+
+      <button type = "button"
+              onclick = "back()">
+        count backwards
+      </button>
+
+      <button type = "button"
+              onclick = "byFive()">
+        count by fives
+      </button>
+
+    </fieldset>
+  </form>
+
+  <div id = "output">Click a button to see some counting...</div>
+</body>
+</html>

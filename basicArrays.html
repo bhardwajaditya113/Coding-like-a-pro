@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>basicArrays.html</title>
+  <meta charset = "UTF-8" />
+  <script type = "text/javascript">
+  //<![CDATA[
+  
+  var output;
+  var books;
+  var topics;
+
+  function init(){
+    //initialize output and arrays
+    //from basicArrays.html
+    output = document.getElementById("output");
+    books = Array("Flash Game Programming for Dummies",
+                  "Game Programming, the L Line",
+                  "HTML / XHTML / CSS All in One",
+                  "JavaScript and AJAX for Dummies",
+                  "HTML5 Quick Reference");
+   
+    topics = Array(5);
+    topics[0] = "HTML5";
+    topics[1] = "CSS3";
+    topics[2] = "JavaScript";
+    topics[4] = "AJAX";
+  } // end init
+
+  function showBooks(){
+    //from basicArrays.html
+    output.innerHTML = "";
+    for (i = 0; i < books.length; i++){
+      output.innerHTML += books[i] + "<br />";
+    } // end for loop
+  } // end showBooks
+
+  function showTopics(){
+    //from basicArrays.html
+    output.innerHTML = "";
+    for (topicID in topics){
+      output.innerHTML += topics[topicID] + "<br />";
+    } // end for
+  } // end showTopics
+
+  //]]>
+  </script>
+</head>
+
+<body onload = "init()">
+  <h1>Array Demo</h1>
+  <form action = "">
+    <fieldset>
+      <button type = "button"
+              onclick = "showBooks()">
+        show books
+      </button>
+
+      <button type = "button"
+              onclick = "showTopics()">
+        show topics
+      </button>
+    </fieldset>
+  </form>
+  <div id = "output">
+    books and topics will appear here...
+  </div>
+</body>
+</html>
